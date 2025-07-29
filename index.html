@@ -3,26 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Local Food Menu App</title>
+  <title>Local Food Menu</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>🍲 Nigerian Food Menu</h1>
-
   <div class="container">
-    <!-- Left side: Menu -->
-    <div id="menu" class="menu"></div>
+    <header>
+      <h1>Local Food Menu</h1>
+    </header>
 
-    <!-- Right side: Cart -->
-    <div class="cart">
+    <main class="main-content">
+  <div class="main-layout">
+    <section class="menu">
+
+      <div class="food-card" data-name="Jollof Rice" data-price="4500">
+        <img src="images/jollof.jpg" alt="Jollof Rice">
+        <h3>Jollof Rice</h3>
+        <p>Delicious party Jollof served hot.</p>
+        <p>₦1500</p>
+        <button class="add-btn">Add to Plate</button>
+      </div>
+
+      <div class="food-card" data-name="Egusi Soup" data-price="1800">
+        <img src="images/egusi.jpg" alt="Egusi Soup">
+        <h3>Egusi Soup</h3>
+        <p>Thick melon soup with assorted meat.</p>
+        <p>₦1800</p>
+        <button class="add-btn">Add to Plate</button>
+      </div>
+
+      <div class="food-card" data-name="Akpu" data-price="2000">
+        <img src="images/akpu.jpg" alt="Akpu">
+        <h3>Akpu</h3>
+        <p>Soft and stretchy, perfect with soups.</p>
+        <p>₦500</p>
+        <button class="add-btn">Add to Plate</button>
+      </div>
+
+      <div class="food-card" data-name="Suya" data-price="2300">
+        <img src="images/suya.jpg" alt="Suya">
+        <h3>Suya</h3>
+        <p>Spicy grilled meat with onions.</p>
+        <p>₦1200</p>
+        <button class="add-btn">Add to Plate</button>
+      </div>
+    </section>
+
+    <aside class="cart">
       <h2>Your Plate</h2>
-      <ul id="cart-items"></ul>
-      <p>Total: ₦<span id="total">0</span></p>
-      <button id="submit-btn">Submit Order</button>
-      <button id="print-btn">Print</button>
-    </div>
+      <div class="cart-items">
+        <div class="cart-header">
+          <span>Item</span>
+          <span>Qty</span>
+          <span>Price</span>
+        </div>
+        <ul id="cart-list"></ul>
+      </div>
+      <p class="total">Total: ₦<span id="total">0</span></p>
+      <button id="submit-order" class="add-btn">Submit Order</button>
+      <button id="print-order" class="add-btn">Print</button>
+      <div id="loading-spinner" class="spinner hidden"></div>
+      <p id="delivery-time" class="delivery"></p>
+    </aside>
   </div>
-
+</main>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
